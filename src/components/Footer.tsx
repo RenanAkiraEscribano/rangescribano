@@ -11,12 +11,51 @@ const Footer = () => {
             <p className="font-mono text-xs tracking-[0.25em] uppercase text-primary mb-3">
               {t("Contact", "Contato")}
             </p>
-            <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
-              {t(
-                "Federal University of Paraná – Palotina Sector, Rua Pioneira, 2153. Department of Engineering and Exact Sciences. Palotina, Paraná, Brazil",
-                "Universidade Federal do Paraná – Setor Palotina, Rua Pioneira, 2153. Departamento de Engenharias e Exatas. Palotina, Paraná, Brasil"
-              )}
-            </p>
+            <div className="text-sm text-muted-foreground leading-relaxed max-w-sm space-y-2">
+              <p>
+                {t(
+                  "Federal University of Paraná – Palotina Sector",
+                  "Universidade Federal do Paraná – Setor Palotina"
+                )}
+              </p>
+
+              <p>
+                {t(
+                  "Department of Engineering and Exact Sciences",
+                  "Departamento de Engenharias e Exatas"
+                )}
+              </p>
+
+              <p>
+                {t(
+                  "Rua Pioneira, 2153",
+                  "Rua Pioneira, 2153"
+                )}
+                <br />
+                {t(
+                  "Palotina, Paraná, Brazil",
+                  "Palotina, Paraná, Brasil"
+                )}
+              </p>
+
+              <p>
+                <a
+                  href="tel:+554436421000"
+                  className="hover:text-foreground transition-colors"
+                >
+                  +55 (41) 9 9502-8347
+                </a>
+              </p>
+
+              <p>
+                <a
+                  href="mailto:renan.akira@ufpr.br"
+                  className="hover:text-foreground transition-colors"
+                >
+                  renan.akira@ufpr.br
+                </a>
+              </p>
+            </div>
           </div>
 
           <div className="md:text-right">

@@ -68,14 +68,15 @@ const About = () => {
               <div className="space-y-3 text-muted-foreground leading-relaxed max-w-2xl">
                 <p>
                   {t(
-                    "Renan Akira N. G. Escribano is a Ph.D. candidate in Computer Science at UFPR and a Substitute Professor at UFPR - the Palotina Sector. He holds an M.Sc. in Computer Science (2026) and a Teaching Degree in Computer Science (Licenciatura) from UFPR. ",
-                    "Renan Akira N. G. Escribano é doutorando em Informática pela UFPR e professor substituto na UFPR - Setor Palotina. Possui mestrado em Informática (2026) e graduação em Licenciatura em Computação pela UFPR. "
+                    "Ph.D. candidate in Computer Science at UFPR and Substitute Professor at the Federal University of Paraná – Palotina Sector. Holds an M.Sc. in Computer Science (2026) and a Teaching Degree in Computer Science (Licenciatura) from UFPR.",
+                    "Doutorando em Informática pela UFPR e professor substituto na Universidade Federal do Paraná – Setor Palotina. Possui mestrado em Informática (2026) e graduação em Licenciatura em Computação pela UFPR."
                   )}
                 </p>
+
                 <p>
                   {t(
-                    "His research focuses on Machine Learning, Explainable Artificial Intelligence , and Time Series Classification, with an emphasis on fault detection in chemical processes, concept drift, and interpretable models for real-world applications.",
-                    "Sua pesquisa concentra-se em Aprendizado de Máquina, Inteligencia Artificial Interpretavel e Classificação de Séries Temporais, com foco em detecção de falhas em processos químicos e modelos interpretáveis para aplicações do mundo real."
+                    "Research focuses on Machine Learning, Explainable Artificial Intelligence, and Time Series Classification, with emphasis on fault detection in chemical processes, and interpretable models for real-world applications.",
+                    "A pesquisa concentra-se em Aprendizado de Máquina, Inteligência Artificial Explicável e Classificação de Séries Temporais, com ênfase em detecção de falhas em processos químicos e modelos interpretáveis para aplicações do mundo real."
                   )}
                 </p>
               </div>
