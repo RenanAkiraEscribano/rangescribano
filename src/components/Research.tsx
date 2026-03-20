@@ -20,7 +20,7 @@ const publications = [
       "Escribano, R. A. N. G.; Schreiner, M. A.; Oliveira, L. E. S.; Tamanho, G.; Ferreira, J. C. S.; Silva, I. C.; Ponciano, P. C.; Alves, H. J.",
     year: "2025",
     venue: "International Journal of Hydrogen Energy",
-    link: "#",
+    link: "https://doi.org/10.1016/j.ijhydene.2025.150314",
   },
   {
     title:
@@ -30,7 +30,7 @@ const publications = [
     year: "2025",
     venue:
       "IEEE International Conference on Systems, Man, and Cybernetics (SMC), Vienna",
-    link: "#",
+    link: "https://doi.org/10.1109/SMC58881.2025.11342592",
   },
 ];
 
