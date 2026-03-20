@@ -13,8 +13,8 @@ const Footer = () => {
             </p>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
               {t(
-                "University Address Placeholder, Department, City — State, Country",
-                "Endereço da Universidade Placeholder, Departamento, Cidade — Estado, País"
+                "Federal University of Paraná – Palotina Sector, Rua Pioneira, 2153. Department of Engineering and Exact Sciences. Palotina, Paraná, Brazil",
+                "Universidade Federal do Paraná – Setor Palotina, Rua Pioneira, 2153. Departamento de Engenharias e Exatas. Palotina, Paraná, Brasil"
               )}
             </p>
           </div>

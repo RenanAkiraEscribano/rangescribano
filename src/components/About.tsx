@@ -1,13 +1,14 @@
 import { useLang } from "@/contexts/LanguageContext";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { Github, Linkedin, Mail, ExternalLink, GraduationCap, BookOpen } from "lucide-react";
+import photo from "@/assets/eu.png";
 
 const socialLinks = [
-  { label: "Lattes", href: "#", icon: GraduationCap },
-  { label: "LinkedIn", href: "#", icon: Linkedin },
-  { label: "Google Scholar", href: "#", icon: BookOpen },
-  { label: "GitHub", href: "#", icon: Github },
-  { label: "E-mail", href: "mailto:email@example.com", icon: Mail },
+  { label: "Lattes", href: "https://lattes.cnpq.br/2902920151256978", icon: GraduationCap },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/rangescribano/", icon: Linkedin },
+  { label: "Google Scholar", href: "https://scholar.google.com.br/citations?hl=pt-BR&user=k655vc0AAAAJ", icon: BookOpen },
+  { label: "GitHub", href: "https://github.com/RenanAkiraEscribano", icon: Github },
+  { label: "E-mail", href: "mailto:renan.akira@ufpr.br", icon: Mail },
 ];
 
 const About = () => {
@@ -18,8 +19,8 @@ const About = () => {
     <section id="about" className="py-24 md:py-32">
       <div ref={ref} className="section-container">
         <div className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
-             style={{ filter: isVisible ? "blur(0)" : "blur(4px)", transitionTimingFunction: "cubic-bezier(0.16,1,0.3,1)" }}>
-          
+          style={{ filter: isVisible ? "blur(0)" : "blur(4px)", transitionTimingFunction: "cubic-bezier(0.16,1,0.3,1)" }}>
+
           {/* Section label */}
           <p className="font-mono text-xs tracking-[0.25em] uppercase text-primary mb-3">
             {t("About", "Sobre")}
@@ -29,10 +30,12 @@ const About = () => {
           <div className="grid md:grid-cols-[280px_1fr] gap-12 items-start">
             {/* Photo */}
             <div className="flex flex-col items-center md:items-start gap-6">
-              <div className="w-48 h-48 md:w-56 md:h-56 rounded-2xl bg-secondary border border-border overflow-hidden flex items-center justify-center">
-                <span className="text-muted-foreground text-sm font-mono">
-                  {t("Photo", "Foto")}
-                </span>
+              <div className="w-48 h-48 md:w-56 md:h-56 rounded-2xl bg-secondary border border-border overflow-hidden">
+                <img
+                  src={photo}
+                  alt="Renan Akira N. G. Escribano"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Social links */}
@@ -57,22 +60,22 @@ const About = () => {
             <div className="space-y-4">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground tracking-tight" style={{ textWrap: "balance" }}>
                 {t(
-                  "Researcher and Professor in Computer Science",
-                  "Pesquisador e Professor em Ciência da Computação"
+                  "Researcher and Substitute Professor in Computer Science",
+                  "Pesquisador e Professor substituto em Ciência da Computação"
                 )}
               </h2>
 
               <div className="space-y-3 text-muted-foreground leading-relaxed max-w-2xl">
                 <p>
                   {t(
-                    "Renan Akira N G Escribano is a researcher and professor focused on Machine Learning, Explainable Artificial Intelligence, and Computational Intelligence. His work explores the intersection of data-driven methods and interpretable models for real-world applications.",
-                    "Renan Akira N G Escribano é pesquisador e professor com foco em Machine Learning, Inteligência Artificial Explicável e Inteligência Computacional. Seu trabalho explora a intersecção entre métodos orientados a dados e modelos interpretáveis para aplicações no mundo real."
+                    "Renan Akira N. G. Escribano is a Ph.D. candidate in Computer Science at UFPR and a Substitute Professor at UFPR - the Palotina Sector. He holds an M.Sc. in Computer Science (2026) and a Teaching Degree in Computer Science (Licenciatura) from UFPR. ",
+                    "Renan Akira N. G. Escribano é doutorando em Informática pela UFPR e professor substituto na UFPR - Setor Palotina. Possui mestrado em Informática (2026) e graduação em Licenciatura em Computação pela UFPR. "
                   )}
                 </p>
                 <p>
                   {t(
-                    "With experience in time series analysis, concept drift detection, and data science, he collaborates with research laboratories and contributes to advancing the field through publications and academic partnerships.",
-                    "Com experiência em análise de séries temporais, detecção de concept drift e ciência de dados, colabora com laboratórios de pesquisa e contribui para o avanço da área por meio de publicações e parcerias acadêmicas."
+                    "His research focuses on Machine Learning, Explainable Artificial Intelligence , and Time Series Classification, with an emphasis on fault detection in chemical processes, concept drift, and interpretable models for real-world applications.",
+                    "Sua pesquisa concentra-se em Aprendizado de Máquina, Inteligencia Artificial Interpretavel e Classificação de Séries Temporais, com foco em detecção de falhas em processos químicos e modelos interpretáveis para aplicações do mundo real."
                   )}
                 </p>
               </div>

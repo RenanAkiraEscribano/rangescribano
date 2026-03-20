@@ -28,7 +28,7 @@ const Navbar = () => {
     >
       <div className="section-container flex items-center justify-between h-16">
         <a href="#hero" className="font-mono text-sm font-semibold tracking-wide text-primary">
-          RANE
+          Home
         </a>
 
         {/* Desktop nav */}

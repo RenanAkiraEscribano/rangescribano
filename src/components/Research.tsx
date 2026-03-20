@@ -2,42 +2,49 @@ import { useLang } from "@/contexts/LanguageContext";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { ExternalLink } from "lucide-react";
 
+import labMater from "@/assets/labmater.png";
+import labDSBD from "@/assets/logoDSBD.png";
+
 const topics = [
   "Machine Learning",
   "Time Series",
   "Explainable AI",
-  "Concept Drift",
   "Data Science",
-  "Computational Intelligence",
 ];
 
 const publications = [
   {
-    title: "Publication Title Placeholder 1",
-    authors: "Escribano, R. A. N. G. et al.",
-    year: "2024",
-    venue: "Journal / Conference Name",
+    title:
+      "A dataset for classifying operational states in dry reforming of biogas processes",
+    authors:
+      "Escribano, R. A. N. G.; Schreiner, M. A.; Oliveira, L. E. S.; Tamanho, G.; Ferreira, J. C. S.; Silva, I. C.; Ponciano, P. C.; Alves, H. J.",
+    year: "2025",
+    venue: "International Journal of Hydrogen Energy",
     link: "#",
   },
   {
-    title: "Publication Title Placeholder 2",
-    authors: "Escribano, R. A. N. G. et al.",
-    year: "2023",
-    venue: "Journal / Conference Name",
-    link: "#",
-  },
-  {
-    title: "Publication Title Placeholder 3",
-    authors: "Escribano, R. A. N. G. et al.",
-    year: "2023",
-    venue: "Journal / Conference Name",
+    title:
+      "Drift-Aware Machine Learning for Operational State Classification in Biogas Dry Reforming",
+    authors:
+      "Schreiner, M. A.; Escribano, R. A. N. G.; Gomes, H. M.; Almeida, P. R. L.; Oliveira, L. E. S.",
+    year: "2025",
+    venue:
+      "IEEE International Conference on Systems, Man, and Cybernetics (SMC), Vienna",
     link: "#",
   },
 ];
 
 const labs = [
-  { name: "LABMATER", url: "#" },
-  { name: "DSBD", url: "#" },
+  {
+    name: "LABMATER",
+    logo: labMater,
+    link: "https://palotina.ufpr.br/labmater/",
+  },
+  {
+    name: "DSBD",
+    logo: labDSBD,
+    link: "https://prlalmeida.com.br/dsbd/",
+  },
 ];
 
 const Research = () => {
@@ -62,7 +69,8 @@ const Research = () => {
         {/* Topics */}
         <div
           ref={topicsRef}
-          className={`mb-20 transition-all duration-700 ${topicsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+          className={`mb-20 transition-all duration-700 ${topicsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
           style={revealStyle(topicsVisible)}
         >
           <h3 className="text-xl font-semibold text-foreground mb-6">
@@ -84,7 +92,8 @@ const Research = () => {
         {/* Publications */}
         <div
           ref={pubRef}
-          className={`mb-20 transition-all duration-700 ${pubVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+          className={`mb-20 transition-all duration-700 ${pubVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
           style={revealStyle(pubVisible)}
         >
           <h3 className="text-xl font-semibold text-foreground mb-6">
@@ -121,30 +130,39 @@ const Research = () => {
         {/* Partner Labs */}
         <div
           ref={labRef}
-          className={`transition-all duration-700 ${labVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+          className={`transition-all duration-700 ${labVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
           style={revealStyle(labVisible)}
         >
           <h3 className="text-xl font-semibold text-foreground mb-6">
             {t("Partner Laboratories", "Laboratórios Parceiros")}
           </h3>
+
           <div className="flex flex-wrap gap-6">
             {labs.map((lab) => (
               <a
                 key={lab.name}
-                href={lab.url}
+                href={lab.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group card-surface px-8 py-6 flex items-center justify-center hover:border-primary/30 transition-all duration-200 min-w-[160px]"
               >
-                <span className="font-mono text-lg font-semibold text-muted-foreground group-hover:text-primary transition-colors tracking-wide">
-                  {lab.name}
-                </span>
+                {lab.logo ? (
+                  <div className="bg-white rounded-md w-full h-full flex items-center justify-center p-2">
+                    <img
+                      src={lab.logo}
+                      alt={`${lab.name} logo`}
+                      className="h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                ) : (
+                  <span className="font-mono text-lg font-semibold text-muted-foreground group-hover:text-primary transition-colors tracking-wide">
+                    {lab.name}
+                  </span>
+                )}
               </a>
             ))}
           </div>
-          <p className="text-xs text-muted-foreground mt-3 font-mono">
-            {t("Replace with laboratory logos", "Substitua pelas logos dos laboratórios")}
-          </p>
         </div>
       </div>
     </section>
